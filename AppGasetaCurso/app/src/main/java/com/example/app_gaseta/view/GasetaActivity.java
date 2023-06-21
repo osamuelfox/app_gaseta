@@ -18,7 +18,7 @@ import com.example.app_gaseta.model.Pessoa;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class GasetaActivity extends AppCompatActivity {
 
     Pessoa pessoa;
     Pessoa outraPessoa;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 //        Spinner listaDeCursos = findViewById(R.id.ListaSpinner);
 //        listaDeCursos.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,cursoController.getCursos()));
 
-        controller = new PessoaController(MainActivity.this);
+        controller = new PessoaController(GasetaActivity.this);
         controller.toString();
 
         outraPessoa = new Pessoa();
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         btnbuton_Finalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, " Volte ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GasetaActivity.this, " Volte ", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 outraPessoa.setNomeCurso(editNomeCurso.getText().toString());
                 outraPessoa.setTelefone(editTelefone.getText().toString());
 
-                Toast.makeText(MainActivity.this, " Salvo ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GasetaActivity.this, " Salvo ", Toast.LENGTH_SHORT).show();
                 controller.salvar(outraPessoa);
 
             }
