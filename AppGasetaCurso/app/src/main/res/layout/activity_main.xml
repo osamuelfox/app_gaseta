@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.app_gaseta.view.GasetaActivity">
+    tools:context="com.example.app_gaseta.view.MainActivity">
 
     <EditText
-        android:id="@+id/text_Sobrenome"
+        android:id="@+id/text_valor_etanol"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -17,10 +17,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_PrimeiroNome" />
+        app:layout_constraintTop_toBottomOf="@+id/text_valor_gasolina" />
 
     <EditText
-        android:id="@+id/text_PrimeiroNome"
+        android:id="@+id/text_valor_gasolina"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -47,7 +47,7 @@
         app:layout_marginBaseline="10dp" />
 
     <EditText
-        android:id="@+id/text_TelefoneDeContato"
+        android:id="@+id/text_consumoPorEtanol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -57,10 +57,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_NomeDoCurso" />
+        app:layout_constraintTop_toBottomOf="@+id/text_consumoPorGasolina" />
 
     <EditText
-        android:id="@+id/text_NomeDoCurso"
+        android:id="@+id/text_consumoPorGasolina"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -69,7 +69,7 @@
         android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_Sobrenome" />
+        app:layout_constraintTop_toBottomOf="@+id/text_valor_etanol" />
 
     <Button
         android:id="@+id/button_Limpar"
@@ -113,7 +113,7 @@
         android:text="Selecione um Curso"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/text_TelefoneDeContato"
+        app:layout_constraintTop_toBottomOf="@+id/text_consumoPorEtanol"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="114dp" />
 

@@ -6,7 +6,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.example.app_gaseta.model.Pessoa;
-import com.example.app_gaseta.view.GasetaActivity;
+import com.example.app_gaseta.view.MainActivity;
 
 public class PessoaController {
 
@@ -15,9 +15,9 @@ public class PessoaController {
 
     public static final String NOME_PREFERENCES = "pref_listavip";
 
-    public PessoaController(GasetaActivity gasetaActivity){
+    public PessoaController(MainActivity mainActivity){
 
-        preferences = gasetaActivity.getSharedPreferences(NOME_PREFERENCES, 0);
+        preferences = mainActivity.getSharedPreferences(NOME_PREFERENCES, 0);
         listaVip = preferences.edit();
     }
 
