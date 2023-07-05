@@ -56,6 +56,17 @@ public class GasetaActivity extends AppCompatActivity {
         btnbuton_calcular = findViewById(R.id.button_Calcular);
         btnbuton_salvar = findViewById(R.id.button_Salvar);
 
+        esconder();
+
+//        edit_PrecoEtanol.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//            @Override
+//            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+//                if ()
+//                return false;
+//            }
+//        });
+
+
         btnbuton_Limpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +74,7 @@ public class GasetaActivity extends AppCompatActivity {
                 edit_PrecoEtanol.setText("");
                 text_Resultado.setText("Resultado");
                 gasetaController.limpar();
+                btnbuton_salvar.setEnabled(false);
             }
         });
 
@@ -92,6 +104,8 @@ public class GasetaActivity extends AppCompatActivity {
                 Frase = gasetaCalculo.calcular(gaseta);
 
                 text_Resultado.setText(Frase);
+
+                btnbuton_salvar.setEnabled(true);
             }
         });
 
@@ -111,7 +125,20 @@ public class GasetaActivity extends AppCompatActivity {
         });
     }
 
+    public void esconder(){
 
+        String gasolina = edit_PrecoGasolina.getText().toString();
+        String etanol = edit_PrecoEtanol.getText().toString();
+
+        if(gasolina.isEmpty() || etanol.isEmpty()){
+
+            Toast.makeText(GasetaActivity.this, " Preencha todos os campos ", Toast.LENGTH_SHORT).show();
+            gasetaController.salvar(gaseta);
+
+        }else {
+            btnbuton_calcular.setVisibility(View.VISIBLE);
+        }
+    }
 //    public void calcular(View view){
 //
 //        Gaseta gaseta = new Gaseta();
