@@ -1,10 +1,5 @@
 package com.example.app_gaseta.controller;
 
-import com.example.app_gaseta.model.Curso;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class CursoController {
 
 //    private List<String> cursos = new ArrayList<>(
@@ -18,30 +13,30 @@ public class CursoController {
 //        this.cursos = cursos;
 //    }
 
-    private List listaCurso;
-    public List getListaCurso(){
-
-        listaCurso = new ArrayList<Curso>();
-
-        listaCurso.add(new Curso("Informatica"));
-        listaCurso.add(new Curso("Desenvolvimento"));
-        listaCurso.add(new Curso("Enfermagem"));
-        listaCurso.add(new Curso("Administracao"));
-        listaCurso.add(new Curso("Moda"));
-        listaCurso.add(new Curso("Culinaria"));
-        listaCurso.add(new Curso("Catira"));
-        listaCurso.add(new Curso("Jogo do Bicho"));
-
-        return listaCurso;
-    }
-
-    public ArrayList<String> dadosSpinner(){
-        ArrayList<String> dados = new ArrayList<>();
-        for (int i = 0; i < getListaCurso().size();i++ ){
-            Curso objeto = (Curso) getListaCurso().get(i);
-            dados.add(objeto.getCursoDesejado());
-
-        }
-        return dados;
-    }
+//    private List listaCurso;
+//    public List getListaCurso(){
+//
+//        listaCurso = new ArrayList<Curso>();
+//
+//        listaCurso.add(new Curso("Informatica"));
+//        listaCurso.add(new Curso("Desenvolvimento"));
+//        listaCurso.add(new Curso("Enfermagem"));
+//        listaCurso.add(new Curso("Administracao"));
+//        listaCurso.add(new Curso("Moda"));
+//        listaCurso.add(new Curso("Culinaria"));
+//        listaCurso.add(new Curso("Catira"));
+//        listaCurso.add(new Curso("Jogo do Bicho"));
+//
+//        return listaCurso;
+//    }
+//
+//    public ArrayList<String> dadosSpinner(){
+//        ArrayList<String> dados = new ArrayList<>();
+//        for (int i = 0; i < getListaCurso().size();i++ ){
+//            Curso objeto = (Curso) getListaCurso().get(i);
+//            dados.add(objeto.getCursoDesejado());
+//
+//        }
+//        return dados;
+//    }
 }

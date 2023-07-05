@@ -102,6 +102,15 @@
                 android:layout_marginEnd="16dp"
                 android:text="@string/txt_button_Finalizar" />
 
+            <Button
+                android:id="@+id/button_Salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Salvar" />
+
 
         </LinearLayout>
 
