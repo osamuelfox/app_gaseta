@@ -56,17 +56,6 @@ public class GasetaActivity extends AppCompatActivity {
         btnbuton_calcular = findViewById(R.id.button_Calcular);
         btnbuton_salvar = findViewById(R.id.button_Salvar);
 
-        esconder();
-
-//        edit_PrecoEtanol.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-//                if ()
-//                return false;
-//            }
-//        });
-
-
         btnbuton_Limpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,9 +79,7 @@ public class GasetaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 text_Resultado.setText("");
-//
-//                Toast.makeText(GasetaActivity.this,
-//                        GasetaCalculo.calcular(), Toast.LENGTH_SHORT).show();
+
 
                 double gasolina = Double.parseDouble(String.valueOf(edit_PrecoGasolina.getText()));
                 double etanol = Double.parseDouble(String.valueOf(edit_PrecoEtanol.getText()));
@@ -117,27 +104,11 @@ public class GasetaActivity extends AppCompatActivity {
                 outroGaseta.setEdit_PrecoGasolina(edit_PrecoGasolina.getText().toString());
                 outroGaseta.setResultado(text_Resultado.getText().toString());
 
-
                 Toast.makeText(GasetaActivity.this, " Salvo ", Toast.LENGTH_SHORT).show();
-                gasetaController.salvar(gaseta);
+                gasetaController.salvar(outroGaseta);
 
             }
         });
-    }
-
-    public void esconder(){
-
-        String gasolina = edit_PrecoGasolina.getText().toString();
-        String etanol = edit_PrecoEtanol.getText().toString();
-
-        if(gasolina.isEmpty() || etanol.isEmpty()){
-
-            Toast.makeText(GasetaActivity.this, " Preencha todos os campos ", Toast.LENGTH_SHORT).show();
-            gasetaController.salvar(gaseta);
-
-        }else {
-            btnbuton_calcular.setVisibility(View.VISIBLE);
-        }
     }
 //    public void calcular(View view){
 //

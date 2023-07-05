@@ -44,7 +44,7 @@ public class GasetaController {
     public Gaseta buscar(Gaseta outroGaseta){
         outroGaseta.setEdit_PrecoEtanol(preferences.getString("Etanol", ""));
         outroGaseta.setEdit_PrecoGasolina(preferences.getString("Gasolina", ""));
-
+        outroGaseta.setResultado(preferences.getString("Resultado", ""));
         return outroGaseta;
     }
 

@@ -9,7 +9,6 @@ import com.example.app_gaseta.view.GasetaActivity;
 
 public class GasetaCalculo {
 
-
     public GasetaCalculo(GasetaActivity mainActivity){
 
     }

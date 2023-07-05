@@ -7,7 +7,6 @@ public class Gaseta {
     private String resultado;
 
     public Gaseta (){
-
     }
 
     public Gaseta(String edit_PrecoGasolina, String edit_PrecoEtanol, String resultado) {
