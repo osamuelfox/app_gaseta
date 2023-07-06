@@ -14,12 +14,12 @@
         android:theme="@style/Theme.App_lista"
         tools:targetApi="31">
 
-<!--        <activity-->
-<!--            android:name="com.example.app_gaseta.view.MainActivity"-->
-<!--            android:exported="false" />-->
-
         <activity
             android:name="com.example.app_gaseta.view.GasetaActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.app_gaseta.view.SplashActivity"
             android:exported="true">
 
             <intent-filter>
