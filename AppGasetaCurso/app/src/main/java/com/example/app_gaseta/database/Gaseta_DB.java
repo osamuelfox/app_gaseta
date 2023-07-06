@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Gaseta_DB extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Gaseta_DB";
-    public static final int DB_VERSION =1;
+    public static final int DB_VERSION = 1;
 
     Cursor cursor;
 
@@ -21,13 +21,13 @@ public class Gaseta_DB extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
 
         String sqlTableCombustivel =
                 "CREATE TABLE Combustivel (id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nomeComnustivel TEXT, " +
-                "precoCombustivel REAL, " +
-                "resultado TEXT)";
+                        "nomeComnustivel TEXT, " +
+                        "precoCombustivel REAL, " +
+                        "resultado TEXT)";
 
         db.execSQL(sqlTableCombustivel);
     }

@@ -9,8 +9,7 @@ import com.example.app_gaseta.view.GasetaActivity;
 
 public class GasetaCalculo {
 
-    public GasetaCalculo(GasetaActivity mainActivity){
-
+    public GasetaCalculo(GasetaActivity mainActivity) {
     }
 
     @NonNull
@@ -19,21 +18,19 @@ public class GasetaCalculo {
         Log.d("MVC_controller", "Controller Iniciado");
         return super.toString();
     }
-    public String calcular(Gaseta gaseta){
 
+    public String calcular(Gaseta gaseta) {
         double gasolina = Double.parseDouble(gaseta.getEdit_PrecoGasolina());
         double etanol = Double.parseDouble(String.valueOf(gaseta.getEdit_PrecoEtanol()));
         double resultado = (gasolina / etanol);
-
         String frase;
 
-        if(resultado <= 0.70){
+        if (resultado <= 0.70) {
             frase = String.format("Resultado: Melhor opção abasteça c/ Etanol %.2f", resultado);
 
         } else {
             frase = String.format("Resultado: Melhor opção abasteça c/ Gasolina %.2f", resultado);
         }
-
         return frase;
     }
 }

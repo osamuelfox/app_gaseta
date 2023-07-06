@@ -16,7 +16,7 @@ public class GasetaController {
 
     public static final String NOME_PREFERENCES = "pref_listavip";
 
-    public GasetaController(GasetaActivity gasetaActivity){
+    public GasetaController(GasetaActivity gasetaActivity) {
 
         preferences = gasetaActivity.getSharedPreferences(NOME_PREFERENCES, 0);
         listaVip = preferences.edit();
@@ -41,14 +41,14 @@ public class GasetaController {
     }
 
 
-    public Gaseta buscar(Gaseta outroGaseta){
+    public Gaseta buscar(Gaseta outroGaseta) {
         outroGaseta.setEdit_PrecoEtanol(preferences.getString("Etanol", ""));
         outroGaseta.setEdit_PrecoGasolina(preferences.getString("Gasolina", ""));
         outroGaseta.setResultado(preferences.getString("Resultado", ""));
         return outroGaseta;
     }
 
-    public void limpar(){
+    public void limpar() {
         listaVip.clear();
         listaVip.apply();
     }

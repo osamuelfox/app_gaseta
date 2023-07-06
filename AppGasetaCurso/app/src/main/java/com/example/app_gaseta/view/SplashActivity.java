@@ -35,6 +35,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(telaPrincipal);
                 finish();
             }
-        },TIME_OUT_SPLASH);
+        }, TIME_OUT_SPLASH);
     }
 }
