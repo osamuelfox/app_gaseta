@@ -1,24 +1,27 @@
 package com.example.app_gaseta.controller;
 
+import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.app_gaseta.database.Gaseta_DB;
 import com.example.app_gaseta.model.Gaseta;
 import com.example.app_gaseta.view.GasetaActivity;
 
 
-public class GasetaController {
+public class GasetaController extends Gaseta_DB {
 
     SharedPreferences preferences;
     SharedPreferences.Editor listaVip;
 
     public static final String NOME_PREFERENCES = "pref_listavip";
 
-    public GasetaController(GasetaActivity gasetaActivity) {
+    public GasetaController(GasetaActivity activity) {
+        super(activity);
 
-        preferences = gasetaActivity.getSharedPreferences(NOME_PREFERENCES, 0);
+        preferences = activity.getSharedPreferences(NOME_PREFERENCES, 0);
         listaVip = preferences.edit();
     }
 
@@ -31,12 +34,21 @@ public class GasetaController {
 
     public Gaseta salvar(Gaseta gaseta) {
 
+        ContentValues dados = new ContentValues();
+
         Log.d("MVP_MVC_controller", "Salvo: " + gaseta.toString());
 
         listaVip.putString("Etanol", gaseta.getEdit_PrecoEtanol());
         listaVip.putString("Gasolina", gaseta.getEdit_PrecoGasolina());
         listaVip.putString("Resultado", gaseta.getResultado());
         listaVip.apply();
+
+        dados.put("Resultado", gaseta.getResultado());
+        dados.put("Gasolina", gaseta.getEdit_PrecoGasolina());
+        dados.put("Etanol", gaseta.getEdit_PrecoEtanol());
+
+        salvarObjeto("Combustivel",dados);
+
         return gaseta;
     }
 
