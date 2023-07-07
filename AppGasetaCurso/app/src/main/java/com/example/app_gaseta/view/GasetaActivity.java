@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.app_gaseta.R;
 import com.example.app_gaseta.controller.GasetaCalculo;
 import com.example.app_gaseta.controller.GasetaController;
+import com.example.app_gaseta.database.Gaseta_DB;
 import com.example.app_gaseta.model.Gaseta;
 
 public class GasetaActivity extends AppCompatActivity {
@@ -29,13 +30,16 @@ public class GasetaActivity extends AppCompatActivity {
     GasetaController gasetaController;
     Gaseta outroGaseta;
     Gaseta gaseta;
-
     GasetaCalculo gasetaCalculo;
+
+    Gaseta_DB gaseta_DB;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gaseta);
+
+        Gaseta_DB db = new Gaseta_DB(getBaseContext());
 
         gasetaController = new GasetaController(GasetaActivity.this);
 

@@ -13,7 +13,7 @@ import com.example.app_gaseta.database.Gaseta_DB;
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
-    public static final int TIME_OUT_SPLASH = 3000;
+    public static final int TIME_OUT_SPLASH = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
